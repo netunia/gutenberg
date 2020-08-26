@@ -556,7 +556,7 @@ class REST_Sidebars_Controller_Test extends WP_Test_REST_Controller_Testcase {
 	}
 
 	/**
-	 *
+	 * Tests if the endpoint correctly handles "slashable" characters such as " or '.
 	 */
 	public function test_update_item_slashing() {
 		$this->setup_widget( 'widget_text', 1, array( 'text' => 'Custom text test' ) );
@@ -592,7 +592,7 @@ class REST_Sidebars_Controller_Test extends WP_Test_REST_Controller_Testcase {
 					array(
 						'id'           => 'text-1',
 						'settings'     => array(
-							'text'   => 'Updated \\" \\\' &gt; text test',
+							'text'   => 'Updated \\" \\\' > text test',
 							'title'  => '',
 							'filter' => false,
 						),
@@ -601,7 +601,7 @@ class REST_Sidebars_Controller_Test extends WP_Test_REST_Controller_Testcase {
 						'name'         => 'Text',
 						'description'  => 'Arbitrary text.',
 						'number'       => 1,
-						'rendered'     => '			<div class="textwidget">Updated \\" \\\' &gt; text test</div>' . "\n		",
+						'rendered'     => '<div class="textwidget">Updated \\" \\\' > text test</div>',
 					),
 				),
 			),
