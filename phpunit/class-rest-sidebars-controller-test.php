@@ -569,7 +569,7 @@ class REST_Sidebars_Controller_Test extends WP_Test_REST_Controller_Testcase {
 					array(
 						'id'           => 'text-1',
 						'settings'     => array(
-							'text' => 'Updated \\" \\\' > text test',
+							'text' => 'Updated \\" \\\' text test',
 						),
 						'id_base'      => 'text',
 						'widget_class' => 'WP_Widget_Text',
@@ -592,7 +592,7 @@ class REST_Sidebars_Controller_Test extends WP_Test_REST_Controller_Testcase {
 					array(
 						'id'           => 'text-1',
 						'settings'     => array(
-							'text'   => 'Updated \\" \\\' &gt; text test',
+							'text'   => 'Updated \\" \\\' text test',
 							'title'  => '',
 							'filter' => false,
 						),
@@ -601,7 +601,7 @@ class REST_Sidebars_Controller_Test extends WP_Test_REST_Controller_Testcase {
 						'name'         => 'Text',
 						'description'  => 'Arbitrary text.',
 						'number'       => 1,
-						'rendered'     => '<div class="textwidget">Updated \\" \\\' &gt; text test</div>',
+						'rendered'     => '<div class="textwidget">Updated \\" \\\' text test</div>',
 					),
 				),
 			),
